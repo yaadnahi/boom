@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="leaderboard.css">
+  <link rel="stylesheet" href="Spopups.css">
+
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="lb-wrapper">
+
+
+    <div class="lwrap-0">
+      <i class="fas fa-times"></i>
+    </div>
+
+    <div class="lwrap-1">
+      <span class="leaderboard">Leaderboard</span>
+    </div>
+
+    <div class="lwrap-2">
+      <div class="lwrap-2-1">
+      <span class="p1-name-lb">P1</span>
+      </div>
+
+      <div class="lwrap-2-2">
+      <span class="p2-name-lb">P2</span>
+      </div>
+    </div>
+
+    <div class="lwrap-3">
+      <div class="lwrap-3-1">
+      <span class="p1-streak"></span>
+      <span class="p1-streak"></span>
+      <span class="p1-streak"></span>
+      <span class="p1-streak"></span>
+      <span class="p1-streak"></span>
+      <span class="p1-streak"></span>
+      <span class="p1-streak"></span>
+      </div>
+      <div class="lwrap-3-2">
+      <span class="p2-streak"></span>
+      <span class="p2-streak"></span>
+      <span class="p2-streak"></span>
+      <span class="p2-streak"></span>
+      <span class="p2-streak"></span>
+      <span class="p2-streak"></span>
+      <span class="p2-streak"></span>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+
+
+                  CONTAINERS
+
+
+     -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <div class="container c-1">
+
+      <div class="wrapper-0">
+        <span class="enter-name">
+          Enter Names
+        </span>
+      </div>
+  
+      <div class="name-wrapper-1">
+  
+        <div class="nwrap nwrap-1-1">
+          <span id="p1-name">Player 1</span>
+          <input type="text" id="field-1">
+        </div>
+        <div class="nwrap nwrap-1-2">
+          <span id="p2-name">Player 2</span>
+          <input type="text" id="field-2">
+        </div>
+    
+        <div class="nwrap-1-3">
+          <button id="submit">ENTER</button>
+        </div>
+  
+  
+      </div>
+  </div> 
+
+
+
+    <div class="container c-2">
+
+      <div class="wrapper-0">
+        <span class="choose-symbol">
+          Choose Emoji
+        </span>
+      </div>
+  
+      <div class="emoji-wrapper-1">
+  
+        <div class="ewrap ewrap-1">
+          <span class="symbol">😊</span>
+        </div>
+    
+        <div class="ewrap ewrap-2">
+          <span class="symbol">😘</span>
+        </div>
+    
+        <div class="ewrap ewrap-3">
+          <span class="symbol">😉</span>
+        </div>
+    
+        <div class="ewrap ewrap-4">
+          <span class="symbol">😎</span>
+        </div>
+    
+        <div class="ewrap ewrap-5">
+          <span class="symbol">😁</span>
+        </div>
+    
+        <div class="ewrap ewrap-6">
+          <span class="symbol">😬</span>
+        </div>
+    
+      </div>
+    </div> 
+  
+
+
+
+    <div class="container c-3">
+
+      <div class="wrapper-0">
+        <span class="choose-rounds">
+          Choose Rounds
+        </span>
+      </div>
+  
+      <div class="round-wrapper-1">
+  
+       <div class="rwrap rwrap-1">
+         <span class="round r-1">1</span>
+       </div>
+  
+       <div class="rwrap rwrap-2">
+        <span class="round r-2">3</span>
+      </div>
+  
+      <div class="rwrap rwrap-3">
+        <span class="round r-3">5</span>
+      </div>
+  
+      <div class="rwrap rwrap-4">
+        <span class="round r-4">7</span>
+      </div>
+  
+  
+      </div>
+    </div> 
+
+
+
+    <div class="container c-4">
+
+      <div class="wrapper-0">
+        <span class="instructions">
+          Instructions
+        </span>
+      </div>
+  
+      <div class="instruction-wrapper-1">
+  
+       <div class="iwrap iwrap-1">
+         <div class="iwrap-1-1">
+          <span class="instruction i-1">
+            <span class="bullet">-</span> There is a bomb underneath one of the cells.
+          </span>
+         </div>
+         <div class="iwrap-1-2">
+          <span class="instruction i-2">
+            <span class="bullet">-</span> Your mission, <span class="warning">DON'T CLICK</span> on the cell with the bomb underneath.
+          </span>
+         </div>
+       </div>
+
+       <div class="iwrap-2">
+         <button id="go-btn">
+          Let's Go
+         </button>
+       </div>
+  
+      </div>
+  
+  
+      </div>
+
+
+      <div class="container c-5">
+
+        <div class="wrapper-0">
+          <span class="winner-title">
+            Winner
+          </span>
+        </div>
+    
+        <div class="winner-wrapper-1">
+    
+          <div class="wwrap wwrap-1-1">
+            
+            <span id="winner-name">
+              Winner Name
+            </span>
+
+          </div>
+
+          <div class="wwrap wwrap-1-2">
+
+            <div id="reload">
+              <i class="fas fa-redo-alt"></i>
+            </div>
+
+          </div>
+          
+    
+    
+        </div>
+    </div> 
+
+
+
+
+    <div class="container c-6">
+
+      <div class="wrapper-0">
+        <span class="ultimate-winner-title">
+          Ultimate Winner
+        </span>
+      </div>
+  
+      <div class="ultimate-winner-wrapper-1">
+  
+        <div class="uwrap uwrap-1-1">
+          
+          <span id="ultimate-winner-name">
+            Ultimate Winner Name
+          </span>
+
+        </div>
+
+        <div class="uwrap uwrap-1-2">
+
+          <div id="play-again">
+
+            <button id="play-again-btn">
+              Play Again
+            </button>
+
+
+          </div>
+
+        </div>
+        
+  
+  
+      </div>
+  </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 
+
+
+      MAIN WRAPPERS
+
+
+   -->
+
+
+
+
+
+
+
+
+    
+    <div class="wrapper0">
+      <div class="wrap-0-1">
+        <div class="wrap-0-1-1">
+          <span class="game-title">
+            BOOM
+          </span>
+        </div>
+        <div class="wrap-0-1-2">
+          <span class="tag-line">
+            A fun game to enjoy with your friends, totally based on luck.
+          </span>
+        </div>
+
+        <div class="wrap-0-1-3">
+          <button id="start">
+            START
+          </button>
+        </div>
+      </div>
+     
+      
+    </div>
+
+
+  <div class="wrapper1">
+
+    <div class="mwrap-1">
+      <i class="fas fa-bars"></i>
+    </div>
+
+
+   <div class="mwrap-2">
+    <span class="game-title">BOOM</span>
+   </div>
+
+   <div class="mwrap-3">
+
+   </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/79c316d50f.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: "Roboto";
+}
+
+.lb-wrapper {
+  display: grid;
+  grid-template-rows: 25px 90px 50px minmax(0, auto);
+  width: 600px;
+  height: 100vh;
+  border: 1px solid #ffc30b;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #ffc30b;
+  position: fixed;
+  top: 0;
+  display: none;
+  z-index: 10;
+}
+
+
+
+
+
+.leaderboard {
+  font-family: "Permanent Marker";
+  color: #051d41;
+}
+
+.lwrap-0 {
+  justify-self: right;
+}
+
+
+.fa-times {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+
+.fa-times:hover {
+  cursor: pointer;
+}
+
+
+.lwrap-1 {
+  font-size: 30px;
+  justify-self: center;
+  align-self: center;
+}
+
+.lwrap-2 {
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+
+
+
+.lwrap-2-1, .lwrap-2-2 {
+  justify-self: center;
+  align-self: center;
+}
+
+
+.p1-name-lb, .p2-name-lb {
+  font-size: 20px;
+  font-family: "Shadows Into Light";
+  font-weight: bold;
+}
+
+
+.lwrap-3 {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  align-self: start;
+}
+
+
+
+.lwrap-3-1, .lwrap-3-2 {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  font-size: 18px;
+}
+
+
+
+.p1-streak, .p2-streak {
+  font-size: 15px;
+  width: 300px;
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f5e6bb;
+
+}
+
+
+
+
+
+.p1-streak:first-child {
+  border-top-left-radius: 20px;
+}
+
+.p1-streak:last-child {
+  border-bottom-left-radius: 20px;
+}
+
+.p2-streak:first-child {
+  border-top-right-radius: 20px;
+}
+
+
+.p2-streak:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 450px) {
+
+
+
+.lb-wrapper {
+  display: grid;
+  grid-template-rows: 25px 90px 50px minmax(0, auto);
+  width: 300px;
+  height: 100vh;
+  border: 1px solid #ffc30b;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #ffc30b;
+  position: fixed;
+  top: left;
+  display: none;
+}
+
+.leaderboard {
+  font-family: "Permanent Marker";
+  color: #051d41;
+}
+
+.lwrap-0 {
+  justify-self: right;
+}
+
+
+.fa-times {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.lwrap-1 {
+  font-size: 30px;
+  justify-self: center;
+  align-self: center;
+}
+
+.lwrap-2 {
+  display: grid;
+  grid-template-columns: 150px 150px;
+}
+
+  .lwrap-2-1, .lwrap-2-2 {
+    justify-self: center;
+    align-self: center;
+  }
+
+.p1-name, .p2-name {
+  font-size: 20px;
+  font-family: "Shadows Into Light";
+  font-weight: bold;
+}
+
+.lwrap-3 {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  height: 500px;
+}
+
+
+.lwrap-3-1, .lwrap-3-2 {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  font-size: 18px;
+}
+
+.p1-streak, .p2-streak {
+  font-size: 15px;
+  width: 150px;
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f5e6bb;
+  
+}
+
+
+
+
+.p1-streak:first-child {
+  border-top-left-radius: 10px;
+}
+
+.p1-streak:last-child {
+  border-bottom-left-radius: 10px;
+}
+
+.p2-streak:first-child {
+  border-top-right-radius: 10px;
+}
+
+
+.p2-streak:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+
+
+
+}
