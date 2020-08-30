@@ -279,6 +279,9 @@
     color: #fff;
   }
 
+  #go-btn:hover {
+    cursor: pointer;
+  }
 
 
 
@@ -293,7 +296,7 @@
 
   .winner-wrapper-1 {
     display: grid;
-    grid-template-rows: 150px 50px;
+    grid-template-rows: 200px;
     background-color: #ffc30b;
     /* border-top: 2px solid #051d41; */
   }
@@ -312,23 +315,11 @@
     font-size: 50px;
     font-family: "Sedgwick Ave Display";
     font-weight: bold;
-    color: #ff0800;
+    color: #141E30;
   }
 
-  .wwrap-1-2 {
-    justify-self: right;
-    align-self: center;
-  }
 
-  #reload {
-    font-size: 25px;
-    color: #004953;
-    padding-right: 15px;
-  }
 
-#reload:hover {
-  cursor: pointer;
-}
 
 
 
@@ -358,7 +349,7 @@
     font-size: 70px;
     font-family: "Sedgwick Ave Display";
     font-weight: bold;
-    color: #ff0800;
+    color: #141E30;
   }
 
   .uwrap-1-2 {
@@ -376,6 +367,10 @@
     font-family: "Permanent Marker";
   }
 
+
+  #play-again-btn:hover {
+    cursor: pointer;
+  }
 
 
 

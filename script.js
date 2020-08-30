@@ -74,6 +74,7 @@ function startGame() {
   wrapperZero.style.display = "none";
   wrapperOne.style.display = "block";
   wrapperOne.style.display = "grid";
+  menuBtn.style.display = "none";
 
   containerArray[0].style.display = "block";
 
@@ -148,7 +149,7 @@ function playerNames() {
 
   } else if (playerOneField.value != "" || playerTwoField.value != "") {
 
-    alert("Please enter Player Names to Continue");
+    alert("Please enter names to Continue");
 
   }
 
@@ -206,7 +207,7 @@ for(let i = 0; i < playerSymbols.length; i++) {
     chooserName.classList.add("chooser-name");
     chooserName.innerText = playerOneName;
     emojiWraps[i].appendChild(chooserName);
-    console.log(`${playerOneName} your symbol is ${playerSymbols[i].innerText}`);
+    // console.log(`${playerOneName} your symbol is ${playerSymbols[i].innerText}`);
 
     playerSymbols[i].removeEventListener("click", selectSymbols);
     symbolChoiceCounter++;
@@ -222,10 +223,10 @@ for(let i = 0; i < playerSymbols.length; i++) {
     chooserName.classList.add("chooser-name");
     chooserName.innerText = playerTwoName;
     emojiWraps[i].appendChild(chooserName);
-    console.log(`${playerTwoName} your symbol is ${playerSymbols[i].innerText}`);
+    // console.log(`${playerTwoName} your symbol is ${playerSymbols[i].innerText}`);
     playerSymbols[i].removeEventListener("click", selectSymbols);
 
-    setTimeout(loadNextPopUp, 1000);
+    setTimeout(loadNextPopUp, 200);
 
 
     symbolChoiceCounter++;
@@ -294,10 +295,10 @@ for(let i = 0; i < roundsArray.length; i++) {
     if(roundChoiceCounter < 1) {
 
       numberOfRounds = roundsArray[i].innerText;
-      console.log(numberOfRounds);
+      // console.log(numberOfRounds);
       roundChoiceCounter++;
 
-      setTimeout(loadInstructionPopUp, 1000);
+      setTimeout(loadInstructionPopUp, 200);
 
     } else if(roundChoiceCounter == 1) {
 
@@ -362,6 +363,11 @@ let genericCounter = 0;
 let ultimateWinnerName = document.getElementById("ultimate-winner-name");
 let finalP1Counter = 0;
 let finalP2Counter = 0;
+let playAgainBtn = document.getElementById("play-again");
+let boomSound = document.querySelector("audio");
+
+
+
 
 let p1StreakArray = document.getElementsByClassName("p1-streak");
 let p2StreakArray = document.getElementsByClassName("p2-streak");
@@ -369,14 +375,17 @@ let p2StreakArray = document.getElementsByClassName("p2-streak");
 let leaderBoardCounter = 0;
 
 
+
 function addGrid() {
+
+  menuBtn.style.display = "block";
 
 
   if(genericCounter < numberOfRounds) {
 
-    console.log(`Counter is ${genericCounter}`);
+    // console.log(`Counter is ${genericCounter}`);
     genericCounter++;
-    console.log(`Counter is ${genericCounter}`);
+    // console.log(`Counter is ${genericCounter}`);
 
   }else if(genericCounter == numberOfRounds) {
 
@@ -384,15 +393,20 @@ function addGrid() {
       containerArray[5].style.display = "block";
       wrapperGrid.style.display = "none";
       ultimateWinnerName.innerText = playerOneName;
+      
 
     } else if(finalP1Counter < finalP2Counter) {
       containerArray[5].style.display = "block";
       wrapperGrid.style.display = "none";
       ultimateWinnerName.innerText = playerTwoName;
+     
 
     }
 
-    console.log("Game Over");
+    // console.log("Game Over");
+    playAgainBtn.addEventListener("click", () => {
+      location.reload();
+    });
 
   }
 
@@ -500,7 +514,6 @@ function loadGrid() {
   
   }
 
-  // console.log(cellArray);
   gameLogic(cellArray);
 
 return cellArray;
@@ -601,6 +614,12 @@ function clickedCell() {
 
       p1StreakArray[leaderBoardCounter].innerText = "0";
       p2StreakArray[leaderBoardCounter].innerText = "1";
+      wrapperOne.style.backgroundImage = "url('https://i.giphy.com/media/HhTXt43pk1I1W/giphy.webp')";
+      wrapperOne.style.backgroundRepeat = "no-repeat";
+      wrapperOne.style.backgroundSize = "100vw 100vh";
+
+
+      boomSound.play();
       winnerName.innerText = playerTwoName;
       leaderBoardCounter++;
 
@@ -658,6 +677,11 @@ function clickedCell() {
 
     p1StreakArray[leaderBoardCounter].innerText = "1";
     p2StreakArray[leaderBoardCounter].innerText = "0";
+    wrapperOne.style.backgroundImage = "url('https://i.giphy.com/media/HhTXt43pk1I1W/giphy.webp')";
+    wrapperOne.style.backgroundRepeat = "no-repeat";
+    wrapperOne.style.backgroundSize = "100vw 100vh";
+
+    boomSound.play();
     winnerName.innerText = playerOneName;
 
     leaderBoardCounter++;
