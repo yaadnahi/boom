@@ -627,13 +627,14 @@ function clickedCell() {
        
 
         setTimeout(addGrid, 2200);
-    
+
         wrapperGrid.innerText = "";
         wrapperGrid.style.display = "block";
         wrapperGrid.style.display = "grid";
 
         setTimeout(() => {
          containerArray[4].style.display = "none";
+        wrapperOne.style.backgroundImage = "linear-gradient(to right, #243B55, #141E30)";
         }, 2000);
 
         finalP2Counter++;
@@ -697,6 +698,7 @@ function clickedCell() {
 
     setTimeout(() => {
       containerArray[4].style.display = "none";
+    wrapperOne.style.backgroundImage = "linear-gradient(to right, #243B55, #141E30)";
      }, 2000);
 
 
